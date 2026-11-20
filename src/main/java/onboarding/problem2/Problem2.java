@@ -14,6 +14,7 @@ public class Problem2 {
             for (char c : answer.toCharArray()) {
                 if (isDuplicate(c, sb)) {
                     sb.deleteCharAt(sb.length() - 1);
+                    lastChar = c;
                     continue;
                 }
                 if (isSameWithLastChar(c, lastChar)) {

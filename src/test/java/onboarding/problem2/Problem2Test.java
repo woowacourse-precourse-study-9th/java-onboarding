@@ -15,7 +15,10 @@ public class Problem2Test {
     @ParameterizedTest
     @CsvSource({"browoanoommnaon, brown",
             "pppaabllle, be",
-            "ddddoongoonnttaoae, ngaoae"
+            "ddddoongoonnttaoae, ngaoae",
+            "baaba, a",
+            "abbab, b",
+            "accac, c"
     })
     void 중복되는_값을_제거하여_반환한다(String input, String expect) {
         assertThat(Problem2.solution(input)).isEqualTo(expect);

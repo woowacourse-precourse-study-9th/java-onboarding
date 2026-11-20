@@ -34,6 +34,26 @@ public class Problem1Test {
                 .isEqualTo(0);
     }
 
+    @ParameterizedTest
+    @DisplayName("포비의 페이지가 잘못되면 -1을 반환")
+    @MethodSource("invalidPageCase")
+    void 포비의_페이지가_잘못되면_음수1_반환(List<Integer> invalidPages) {
+        List<Integer> crong = List.of(211, 212);
+
+        assertThat(Problem1.solution(invalidPages, crong))
+                .isEqualTo(-1);
+    }
+
+    @ParameterizedTest
+    @DisplayName("크롱의 페이지가 잘못되면 -1을 반환")
+    @MethodSource("invalidPageCase")
+    void 크롱의_페이지가_잘못되면_음수1_반환(List<Integer> invalidPages) {
+        List<Integer> pobi = List.of(131, 132);
+
+        assertThat(Problem1.solution(pobi, invalidPages))
+                .isEqualTo(-1);
+    }
+
     static Stream<Arguments> firstListWinCase(){
         return Stream.of(
                 Arguments.of(List.of(221, 222), List.of(111,112)),
@@ -46,6 +66,17 @@ public class Problem1Test {
                 Arguments.of(List.of(97, 98), List.of(197, 198)),
                 Arguments.of(List.of(95, 96), List.of(195, 196)),
                 Arguments.of(List.of(93, 94), List.of(193, 194))
+        );
+    }
+
+    static Stream<Arguments> invalidPageCase() {
+        return Stream.of(
+                Arguments.of(List.of(99, 102)),
+                Arguments.of(List.of(99, 98)),
+                Arguments.of(List.of(2, 3)),
+                Arguments.of(List.of(222, 223)),
+                Arguments.of(List.of(1, 2)),
+                Arguments.of(List.of(399, 400))
         );
     }
 }

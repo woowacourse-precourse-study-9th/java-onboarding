@@ -1,4 +1,4 @@
-package onboarding;
+package onboarding.Problem1;
 
 import java.util.List;
 

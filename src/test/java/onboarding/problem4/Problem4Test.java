@@ -10,8 +10,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 public class Problem4Test {
     @ParameterizedTest
     @CsvSource({
-            "I love you, R olev blf",
-            "ABC DEFGH IJK LMNOPQ R STUVWXYZ, ZYX WVUTS RQP ONMLKJ I HGFEDCBA",
+            "'I love you', 'R olev blf'",
+            "'ABC DEFGH IJK LMNOPQ R STUVWXYZ', 'ZYX WVUTS RQP ONMLKJ I HGFEDCBA'",
             "abc, zyx"
     })
     void 규칙에_맞춰서_알파벳_치환(String input, String expect){

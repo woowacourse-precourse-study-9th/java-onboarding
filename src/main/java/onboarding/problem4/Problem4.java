@@ -4,20 +4,20 @@ public class Problem4 {
     public static String solution(String word) {
         StringBuilder sb = new StringBuilder();
         for(char c : word.toCharArray()){
-            if('a' <= c && c <= 'z'){
-                char s = (char) (('z' - c) + 'a');
-                sb.append(s);
-                continue;
-            }
-            if('A' <= c && c <= 'Z'){
-                char s = (char) (('Z' - c) + 'A');
-                sb.append(s);
-                continue;
-            }
-            sb.append(c);
+            sb.append(reverse(c));
         }
 
         return sb.toString();
+    }
+    private static char reverse(char c){
+        if('a' <= c && c <= 'z'){
+            return (char) (('z' - c) + 'a');
+        }
+        if('A' <= c && c <= 'Z'){
+            return (char) (('Z' - c) + 'A');
+        }
+
+        return c;
     }
 
 }

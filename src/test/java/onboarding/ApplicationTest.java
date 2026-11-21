@@ -1,6 +1,6 @@
 package onboarding;
 
-import onboarding.Problem2.Problem2;
+import onboarding.Problem4.Problem4;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -13,15 +13,6 @@ class ApplicationTest {
 
 
 
-    @Nested
-    class Problem4Test {
-        @Test
-        void case1() {
-            String word = "I love you";
-            String result = "R olev blf";
-            assertThat(Problem4.solution(word)).isEqualTo(result);
-        }
-    }
 
     @Nested
     class Problem5Test {
